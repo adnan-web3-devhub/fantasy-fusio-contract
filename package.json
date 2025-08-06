@@ -1,0 +1,37 @@
+{
+  "name": "fusio-fantasy-contract",
+  "version": "1.0.0",
+  "description": "Smart contract for Fusio Fantasy, a fantasy sports platform on the Binance Smart Chain.",
+  "scripts": {
+    "deploy:contract": "hardhat run scripts/deploy_v2_testnet.js --network bscTestnet",
+    "verify:contract": "hardhat verify --network bsc 0x060496207348916b28C0aBD32A4000F87Ab02eB0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.0",
+    "@openzeppelin/contracts-upgradeable": "^4.9.6",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.3",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@nomiclabs/hardhat-waffle": "^2.0.6",
+    "@openzeppelin/hardhat-upgrades": "^2.5.1",
+    "@nomicfoundation/hardhat-network-helpers": "^1.0.8",
+    "chai": "^4.3.7",
+    "ethereum-waffle": "^4.0.10",
+    "hardhat": "^2.15.0",
+    "jest": "^29.5.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ]
+  }
+}
